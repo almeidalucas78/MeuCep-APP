@@ -1,14 +1,30 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Meus Endereços
     </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon name="add">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <div *ngFor="let endereco of enderecos">
+      <ion-card>
+        <ion-card-content>
+          <ion-card-title>
+            {{endereco.rua}},{{endereco.numero}}
+          </ion-card-title>
+          <ion-card-subtitle>
+            {{endereco.bairro}},{{endereco.cidade}} - {{endereco.estado}}
+          </ion-card-subtitle>
+        </ion-card-content>
+      </ion-card>
+    </div>
   </div>
 </ion-content>
