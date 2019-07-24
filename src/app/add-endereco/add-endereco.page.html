@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Novo Endereço</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-item>
+      <ion-label position="floating">
+        Qual o CEP?
+      </ion-label>
+      <ion-input #cep></ion-input>
+    </ion-item>
+    <div class="ion-padding">
+      <ion-button expand='block' (click)="buscar(cep)">Buscar</ion-button>
+    </div>
+  </div>
+</ion-content>
